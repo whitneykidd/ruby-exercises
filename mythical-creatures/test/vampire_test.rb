@@ -13,27 +13,30 @@ class VampireTest < Minitest::Test
   end
 
   def test_it_keeps_a_pet_bat_by_default
-    
+
     vampire = Vampire.new("Ruthven")
     assert_equal "bat", vampire.pet
   end
 
   def test_it_can_have_other_pets
-    skip
+
     vampire = Vampire.new("Varney", "fox")
     assert_equal "fox", vampire.pet
   end
 
   def test_it_is_thirsty_by_default
-    skip
+
     vampire = Vampire.new("Count von Count")
     assert vampire.thirsty?
   end
 
   def test_it_is_not_thirsty_after_drinking
-    skip
+
     vampire = Vampire.new("Elizabeth Bathory")
     vampire.drink
-    refute vampire.thirsty?
+    assert_equal false, vampire.drink
+
+    vampire = Vampire.new("Ruthven")
+    assert_equal true, vampire.thirsty?
   end
 end
