@@ -13,7 +13,7 @@ class VampireTest < Minitest::Test
   end
 
   def test_it_keeps_a_pet_bat_by_default
-    skip
+    
     vampire = Vampire.new("Ruthven")
     assert_equal "bat", vampire.pet
   end
