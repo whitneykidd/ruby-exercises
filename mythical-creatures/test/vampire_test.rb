@@ -7,10 +7,7 @@ class VampireTest < Minitest::Test
   def test_it_has_a_name
     vampire = Vampire.new("Dracula")
     assert_equal "Dracula", vampire.name
-  end
 
-  def test_it_is_named_something_else
-    skip
     vampire = Vampire.new("Vladimir")
     assert_equal "Vladimir", vampire.name
   end
